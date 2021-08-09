@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.CreateNotificationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Create a Notification"
+                FontSize="26"
+                VerticalOptions="Center" 
+                Padding="30,20,30,24"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Notification Title:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the title for the notification..."
+                   x:Name="notificationTitleEntry"/>
+            <Label Text="Notification Body:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the body for the notification..."
+                   x:Name="notificationBodyEntry"/>
+            <Label Text="Select the date for the notification:"
+                   FontSize="20"/>
+            <DatePicker x:Name="notificationDatePicker"/>
+            <Button Text="Save"
+                    Clicked="saveButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

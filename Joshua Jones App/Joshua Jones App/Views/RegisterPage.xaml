@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.RegisterPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Vertical" Padding="30,90,30,24" Spacing="10" Grid.Row="1">
+            <Label Text="New Student Registration" FontSize="Title" HorizontalOptions="Center" Padding="0,0,0,25"/>
+            <Label Text="New Username:" FontSize="20" Padding="5,40,0,0"/>
+            <Entry Placeholder="Enter new username here" x:Name="newUsername"/>
+            <Label Text="New Password:" FontSize="20" Padding="5,0,0,0"/>
+            <Entry Placeholder="Enter new password here" x:Name="newPassword"/>
+            <Button Margin="0,40,0,70" Text="Create"
+                    FontSize="16"
+                    BackgroundColor="#000033"
+                    Clicked="Button_Clicked"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"/>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>

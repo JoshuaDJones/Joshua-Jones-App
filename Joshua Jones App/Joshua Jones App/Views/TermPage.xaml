@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.TermPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Student's Enrolled Terms"
+                FontSize="26"
+                VerticalOptions="Center" 
+                Padding="30,20,30,24" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="termListView" RowHeight="200" Margin="20,0,20,10" ItemSelected="TermListView_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Orientation="Vertical" 
+                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                        >
+                                <Label Text="{Binding termName}" HorizontalOptions="Center" FontSize="20"/>
+                                <Label Text="Enrolled Courses:" HorizontalOptions="Center" FontSize="16"/>
+                                <Label Text="{Binding courseAmounts}" HorizontalOptions="Center"/>
+                                <Label Text="Start of Term:" HorizontalOptions="Center" FontSize="16"/>
+                                <Label Text="{Binding startTermDate}" HorizontalOptions="Center"/>
+                                <Label Text="End of Term:" HorizontalOptions="Center" FontSize="16"/>
+                                <Label Text="{Binding endTermDate}" HorizontalOptions="Center"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="New Term"
+                    Clicked="CreateButton_Clicked"/>
+            <Button Text="View and Edit the Selected Term"
+                    Clicked="EditButton_Clicked"/>
+            <Button Text="Delete Term"
+                    Clicked ="DeleteButton_Clicked"/>
+            <Button Text="View Courses For Selected Term"
+                    Clicked="ModifyCoursesButton_Clicked"/>
+            <Button Text="Back to the Login Page"
+                    Clicked="backToLoginPageButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

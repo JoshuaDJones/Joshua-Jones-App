@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.AssessmentsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Course Assessments"
+                FontSize="26"
+                VerticalOptions="Center" 
+                Padding="30,20,30,24" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="AssessmentListView" RowHeight="200" Margin="20,0,20,10" ItemSelected="AssessmentListView_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Orientation="Vertical" 
+                                         VerticalOptions="FillAndExpand" 
+                                         HorizontalOptions="FillAndExpand">
+                                
+                                <Label Text="{Binding assessmentName }" HorizontalOptions="Center" FontSize="20"/>
+                                <Label Text="Assessment Type::" HorizontalOptions="Center" FontSize="16"/>
+                                <Label Text="{Binding assessmentType }" HorizontalOptions="Center"/>
+                                <Label Text="Assessment due date:" HorizontalOptions="Center" FontSize="16"/>
+                                <Label Text="{Binding assessmentDueDate }" HorizontalOptions="Center"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="New Assessment"
+                    Clicked="NewAssessmentButton_Clicked"
+                    x:Name="newAssessmentButton"/>
+            <Button Text="View and Edit the Selected Assessment"
+                    Clicked="EditAssessmentButton_Clicked"/>
+            <Button Text="Delete Assessment"
+                    Clicked="deleteButton_Clicked"/>
+            <Button Text="Back to the Courses Page"
+                    Clicked="backToCoursePageButton_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

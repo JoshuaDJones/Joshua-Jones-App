@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.AddEditTerm">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Term Information"
+                FontSize="26"
+                VerticalOptions="Center" 
+                Padding="30,20,30,24"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Term Name:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the term name here..."
+                   x:Name="termNameEntry"/>
+            <Label Text="Select a date for the start of the term:"
+                   FontSize="20"/>
+            <DatePicker x:Name="startDatePicker"/>
+            <Label Text="Select a date for the end of the term:"
+                   FontSize="20"/>
+            <DatePicker x:Name="endDatePicker"/>
+            <Button Text="Save"
+                    Clicked="saveButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

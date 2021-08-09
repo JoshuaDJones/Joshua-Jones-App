@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.AddEditAssessmentsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Assessment Information"
+                FontSize="26"
+                VerticalOptions="Center" 
+                Padding="30,20,30,24"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Assessment Name:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the assessment name here..."
+                   x:Name="assessmentNameEntry"/>
+            <Label Text="Assessment Type:"
+                   FontSize="20"/>
+            <Picker x:Name="assessmentTypePicker"/>
+            <Label Text="Select the due date for the assessment:"
+                   FontSize="20"/>
+            <DatePicker x:Name="dueDatePicker"/>
+            <Button Text="Save"
+                    Clicked="saveButton_Clicked"/>
+            <Button Text="Save and Set a Notification"
+                    Clicked="setNotificationButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

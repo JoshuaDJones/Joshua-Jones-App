@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.AddEditCoursesPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Course Information"
+                FontSize="26"
+                VerticalOptions="Center" 
+                Padding="30,20,30,24"
+                HorizontalOptions="CenterAndExpand" />
+            
+            <Label Text="Course Name:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter a course name here..."
+                   x:Name="courseNameEntry"/>
+            <Label Text="Select a date for the start of the course:"
+                   FontSize="20"/>
+            <DatePicker x:Name="startCourseDatePicker"/>
+            <Label Text="Select a date for the end of the course:"
+                   FontSize="20"/>
+            <DatePicker x:Name="endCourseDatePicker"/>
+            <Label Text="Course Status:"
+                   FontSize="20"/>
+            <Picker x:Name="courseStatusPicker"/>
+            <Label Text="Course Note:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter a course note here..."
+                   x:Name="courseNoteEntry"/>
+            <Label Text="Course Instructor's Name:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the course instuctor's name here..."
+                   x:Name="courseInstructorsNameEntry"/>
+            <Label Text="Course Instructor's Email:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the course instructor's email here..."
+                   x:Name="courseInstructorEmailEntry"/>
+            <Label Text="Course instructor's Phone Number:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the course instructor's phone number here..."
+                   x:Name="courseInstructorPhoneEntry"/>
+            <Button Text="Save"
+                    Clicked="saveButton_Clicked"/>
+            <Button Text="Save and Set a Notification"
+                    Clicked="notificationSaveButton_Clicked"/>
+            <Button Text="Save and Share Notes"
+                    Clicked="sendSaveNoteButton_Clciked"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joshua_Jones_App.Views.ShareNotesPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+           
+            <Label Text="Share a Note"
+                FontSize="26"
+                VerticalOptions="Center" 
+                Padding="30,20,30,24"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Back to Course Page"
+                    Clicked="backToCoursePageButton_Clicked"/>
+
+            <Label Text="Send an Email:"
+                   FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center" />
+            
+            <Label Text="Email Subject:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter in the email's subject..."
+                   x:Name="emailSubjectEntry"/>
+            <Label Text="Email recipient:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter in the recipient's email..."
+                   x:Name="emailRecipientEntry"/>
+            <Button Text="Send Email"
+                    Clicked="sendEmailButton_Clicked"/>
+
+            <Label Text="Send an SMS:"
+                   FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center" />
+
+            <Label Text="SMS Recipient Phone Number:"
+                   FontSize="20"/>
+            <Entry Placeholder="Enter the recipient's number for the message..."
+                   x:Name="textMessagePhoneNumberEntry"/>
+            <Button Text="Send SMS"
+                    Clicked="sendSMSButton_Clicked"/>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
